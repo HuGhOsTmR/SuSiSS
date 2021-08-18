@@ -25,11 +25,11 @@
    						</div>
    						<div class="form-group">
    							<label>Last Name</label>
-   							<input type="text" name="studentLastName" class="form-control" value="${student.studentLastName}>
+   							<input type="text" name="studentLastName" class="form-control" value="${student.studentLastName}">
    						</div>
    						<div class="form-group">
    							<label>First Name</label>
-   							<input type="text" name="studentFirstName" class="form-control" value="${student.studentFirstName}>
+   							<input type="text" name="studentFirstName" class="form-control" value="${student.studentFirstName}">
    						</div>
    					</div>
    					<div class="card-footer">

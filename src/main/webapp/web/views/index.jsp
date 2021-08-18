@@ -8,8 +8,16 @@
         <script src="js/bootstrap.min.js"></script>     
     </head>
     <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<tr>
+		    <td><a href="/toList" class="btn btn-light">Students</a></td>
+        	<td><a href="/toListClasses" class="btn btn-light">Classes</a></td>
+        	<td><a href="/toListAssigns" class="btn btn-light">Assigns</a></td>
+    	</tr>
+    </nav> 
+    </div>
         <div class="container mt-4">
-        <a href="/newStudent" class="btn btn-light">Add Student</a>
+        <a href="/newStudent" class="btn btn-danger">Add Student</a>
         	<table class= "table">
         		<thead>
         			<tr>
@@ -28,20 +36,14 @@
 	        				<td>${student.studentLastName}</td>
 	        				<td>${student.studentFirstName}</td>
 	        				<td>
-		        				<a href="/editAssigns/{student.id}" class="btn btn-success">Assign Class</a>
-		        				<a href="/editStudent/${student.id}" class="btn btn-dark">Edit</a>
+		        				<a href="/newAssign" class="btn btn-light">Assign Class</a>
+		        				<a href="/editStudent/${student.id}" class="btn btn-light">Edit</a>
 		        				<a href="/deleteStudent/${student.id}" class="btn btn-danger">Delete</a>
 	        				</td>
 	        			</tr>
-        			</c:forEach>
-        			
+        			</c:forEach>        			
         		</tbody>
         	</table>
-        	<tr>
-	        	<td><a href="/toList" class="btn btn-primary">Students</a></td>
-	        	<td><a href="/toListClasses" class="btn btn-primary">Classes</a></td>
-	        	<td><a href="/toListAssigns" class="btn btn-primary">Assigns</a></td>
-        	</tr> 
         </div>
     </body>
 </html>

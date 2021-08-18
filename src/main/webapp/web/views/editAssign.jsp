@@ -8,6 +8,7 @@
         <script src="js/bootstrap.min.js"></script>     
     </head>
     <body>
+   		<th>
    		<div class="container mt-4">
    			<form action="/updateAssign" method="POST" class="col-sm-5">
    				<div class="card">
@@ -17,27 +18,59 @@
    					<div class="card-body">
    						<div class="form-group">
    							<label>Id</label>
-   							<input type="text" name="id" class="form-control" value="${assign.id}" readonly="readonly">
+   							<input type="text" name="id" class="form-control" value="${Assign.id}" readonly="readonly">
    						</div>
    						<div class="form-group">
    							<label>Student</label>
-   							<input type="text" name="studentID" class="form-control" value="${assign.studentID}">
+   							<input type="text" name="studentID" class="form-control" value="${Assign.studentID}">
    						</div>
    						<div class="form-group">
    							<label>Class</label>
-   							<input type="text" name="classID" class="form-control" value="${assign.classID}>
+   							<input type="text" name="classID" class="form-control" value="${Assign.classID}">
    						</div>
    						<div class="form-group">
    							<label>State</label>
-   							<input type="text" name="assignState" class="form-control" value="${assign.assignState}>
+   							<input type="text" name="assignState" class="form-control" value="${Assign.assignState}">
    						</div>
    					</div>
    					<div class="card-footer">
    						<input type="submit" value="Update" class="btn btn-link">
-   						<a href="/toListAssign" class="btn btn-link">Cancel</a>   					
+   						<a href="/toListAssigns" class="btn btn-link">Cancel</a>   					
    					</div>
    				</div>
-   			</form>
+   			</form>   			
+   		</div>
+   		</th>
+   		<th>
+   		<div class="container mt-8">
+	   		
+	   				<table class= "table">
+		        		<thead>
+		        			<tr>
+		        				<th>ID</th>
+		        				<th>CLASS</th>
+		        				<th>STUDENT</th>
+		        				<th>STATE</th>
+		        				<th>ACTION</th>
+		        			</tr>        			
+		        		</thead>
+		        		<tbody>
+		        			<c:forEach var="Assign" items="${Assigns}">
+		        				<tr>
+			        				<td>${Assign.id}</td>
+			        				<td>${Assign.classID}</td>
+			        				<td>${Assign.studentID}</td>
+			        				<td>${Assign.assignState}</td>
+			        				<td>
+				        				<a href="/editAssign/${Assign.id}" class="btn btn-success" enabled>Assign Class</a>
+				        				<a href="/editAssign/${Assign.id}" class="btn btn-dark">Edit</a>
+				        				<a href="/deleteAssign/${Assign.id}" class="btn btn-danger">Delete</a>
+			        				</td>
+			        			</tr>
+		        			</c:forEach>
+		        			
+		        		</tbody>
+		        	</table> 			
    		</div>
     </body>
 </html>

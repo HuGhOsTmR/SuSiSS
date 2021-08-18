@@ -36,5 +36,36 @@
    				</div>
    			</form>
    		</div>
+   		<table class= "table">
+        		<thead>
+        			<tr>
+        				<th>ID</th>
+        				<th>CODE</th>
+        				<th>TITLE</th>
+        				<th>DESCRIPTION</th>
+        				<th>ACTION</th>
+        			</tr>        			
+        		</thead>
+        		<tbody>
+        			<c:forEach var="Class" items="${Classes}">
+        				<tr>
+	        				<td>${Class.id}</td>
+	        				<td>${Class.classCode}</td>
+	        				<td>${Class.classTitle}</td>
+	        				<td>${Class.classDescription}</td>
+	        				<td>
+		        				<a href="/toListAssigns" class="btn btn-light">Student List</a>
+		        				<a href="/editClass/${Class.id}" class="btn btn-dark">Edit</a>
+		        				<a href="/deleteClass/${Class.id}" class="btn btn-danger">Delete</a>
+	        				</td>
+	        			</tr>
+        			</c:forEach>
+        		</tbody>
+        	</table>
+        	<tr>
+	        	<td><a href="/toList" class="btn btn-primary">Students</a></td>
+	        	<td><a href="/toListClasses" class="btn btn-primary">Classes</a></td>
+	        	<td><a href="/toListAssigns" class="btn btn-primary">Assigns</a></td>
+        	</tr>
     </body>
 </html>
