@@ -73,10 +73,10 @@
 				<a href="/toList" class="btn btn-danger">Cancel</a>					  					
 			</div>
 		</form>
-		<div class="row">
-		<div class="col-sm-1"></div>
+		<div class="row justify-content-center">
+		
 		<form class="col-sm-10">
-			<div class="card">
+			<div class="table-responsive">
 			<table class= "table">
 	    		<thead>
 	    			<tr>
@@ -95,7 +95,9 @@
 	        				<td>${Class.classTitle}</td>
 	        				<td>${Class.classDescription}</td>
 	        				<td>
-		        				<input type="checkbox" name="" value="">
+	        					<div class="form-check form-switch">
+		        				<input type="checkbox" class="form-check-input" name="" value="">
+		        				</div>
 	       					</td>
 	    				</tr>
 					</c:forEach>
