@@ -95,9 +95,7 @@
 	        				<td>${Class.classTitle}</td>
 	        				<td>${Class.classDescription}</td>
 	        				<td>
-		        				<a href="/toListAssigns" class="btn btn-light">Student List</a>
-		        				<a href="/editClass/${Class.id}" class="btn btn-light">Edit</a>
-		        				<a href="/deleteClass/${Class.id}" class="btn btn-danger">Delete</a>
+		        				<input type="checkbox" name="" value="">
 	       					</td>
 	    				</tr>
 					</c:forEach>
