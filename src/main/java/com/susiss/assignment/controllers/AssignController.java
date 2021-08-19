@@ -1,5 +1,7 @@
 package com.susiss.assignment.controllers;
 
+import java.io.Console;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -57,10 +59,5 @@ public class AssignController {
 		assigns.Delete(id);
 		return "redirect:/toList";
 	}
-	@GetMapping ("/newAssignClasses/{id}")
-	public String AssignStudentClass(@PathVariable int id, Model model) {
-		Student st = assignsStudent.listStudentById(id);
-		model.addAttribute("studentAssign", st);
-		return "indexStudentAssign";		
-	}
+
 }

@@ -19,29 +19,29 @@
    			<form action="/updateStudent" method="POST" class="col-sm-5">
    				<div class="card">
    					<div class="card-header">
-   						<h4>Update Student</h4>
+   						<h4>Assign Class to Student</h4>
    					</div>
    					<div class="card-body">
    						<div class="form-group">
    							<label>Id</label>
-   							<input type="text" name="id" class="form-control" value="${studentAssign.id}" readonly="readonly">
+   							<input type="text" name="id" class="form-control" value="${student.id}" readonly="readonly">
    						</div>
    						<div class="form-group">
    							<label>Code</label>
-   							<input type="text" name="studentID" class="form-control" value="${studentAssign.studentID}">
+   							<input type="text" name="studentID" class="form-control" value="${student.studentID}" readonly="readonly">
    						</div>
    						<div class="form-group">
    							<label>Last Name</label>
-   							<input type="text" name="studentLastName" class="form-control" value="${studentAssign.studentLastName}">
+   							<input type="text" name="studentLastName" class="form-control" value="${student.studentLastName}" readonly="readonly">
    						</div>
    						<div class="form-group">
    							<label>First Name</label>
-   							<input type="text" name="studentFirstName" class="form-control" value="${studentAssign.studentFirstName}">
+   							<input type="text" name="studentFirstName" class="form-control" value="${student.studentFirstName}" readonly="readonly">
    						</div>
    					</div>
    					<div class="card-footer">
-   						<input type="submit" value="Update" class="btn btn-link">
-   						<a href="/toList" class="btn btn-link">Cancel</a>   					
+   						<input type="submit" value="Update" class="btn btn-light">
+   						<a href="/toList" class="btn btn-danger">Cancel</a>   					
    					</div>
    				</div>
    			</form>

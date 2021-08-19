@@ -52,4 +52,12 @@ public class StudentController {
 		assigns.Delete(id);
 		return "redirect:/toList";
 	}
+	
+	@GetMapping ("/newAssignClasses/{id}")
+	public String AssignStudentClass(@PathVariable int id, Model model) {
+		
+		Student st = assigns.listStudentById(id);
+		model.addAttribute("student", st);
+		return "indexStudentAssign";		
+	}
 }
