@@ -69,10 +69,5 @@
         			</c:forEach>
         		</tbody>
         	</table>
-        	<tr>
-	        	<td><a href="/toList" class="btn btn-primary">Students</a></td>
-	        	<td><a href="/toListClasses" class="btn btn-primary">Classes</a></td>
-	        	<td><a href="/toListAssigns" class="btn btn-primary">Assigns</a></td>
-        	</tr>
     </body>
 </html>

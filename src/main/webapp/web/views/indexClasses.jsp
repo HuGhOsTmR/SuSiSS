@@ -16,7 +16,7 @@
     	</tr>
     </nav>
         <div class="container mt-4">
-        <a href="/newClass" class="btn btn-light">Add Class</a>
+        <a href="/newClass" class="btn btn-danger">Add Class</a>
         	<table class= "table">
         		<thead>
         			<tr>

@@ -32,11 +32,11 @@
    						</div>
    						<div class="form-group">
    							<label>Title</label>
-   							<input type="text" name="classTitle" class="form-control" value="${Class.classTitle}>
+   							<input type="text" name="classTitle" class="form-control" value="${Class.classTitle}">
    						</div>
    						<div class="form-group">
    							<label>Description</label>
-   							<input type="text" name="classDescription" class="form-control" value="${Class.classDescription}>
+   							<input type="text" name="classDescription" class="form-control" value="${Class.classDescription}">
    						</div>
    					</div>
    					<div class="card-footer">

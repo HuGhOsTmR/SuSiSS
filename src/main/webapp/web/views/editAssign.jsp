@@ -69,8 +69,8 @@
 			        				<td>${Assign.studentID}</td>
 			        				<td>${Assign.assignState}</td>
 			        				<td>
-				        				<a href="/editAssign/${Assign.id}" class="btn btn-success" enabled>Assign Class</a>
-				        				<a href="/editAssign/${Assign.id}" class="btn btn-dark">Edit</a>
+				        				<a href="/editAssign/${Assign.id}" class="btn btn-light" enabled>Assign Class</a>
+				        				<a href="/editAssign/${Assign.id}" class="btn btn-light">Edit</a>
 				        				<a href="/deleteAssign/${Assign.id}" class="btn btn-danger">Delete</a>
 			        				</td>
 			        			</tr>
