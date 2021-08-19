@@ -8,6 +8,13 @@
         <script src="js/bootstrap.min.js"></script>     
     </head>
     <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<tr>
+		    <td><a href="/toList" class="btn btn-light">Students</a></td>
+        	<td><a href="/toListClasses" class="btn btn-light">Classes</a></td>
+        	<td><a href="/toListAssigns" class="btn btn-light">Assigns</a></td>
+    	</tr>
+    </nav>
         <div class="container mt-4">
         <a href="/newClass" class="btn btn-light">Add Class</a>
         	<table class= "table">
@@ -29,18 +36,13 @@
 	        				<td>${Class.classDescription}</td>
 	        				<td>
 		        				<a href="/toListAssigns" class="btn btn-light">Student List</a>
-		        				<a href="/editClass/${Class.id}" class="btn btn-dark">Edit</a>
+		        				<a href="/editClass/${Class.id}" class="btn btn-light">Edit</a>
 		        				<a href="/deleteClass/${Class.id}" class="btn btn-danger">Delete</a>
 	        				</td>
 	        			</tr>
         			</c:forEach>
         		</tbody>
         	</table>
-        	<tr>
-	        	<td><a href="/toList" class="btn btn-primary">Students</a></td>
-	        	<td><a href="/toListClasses" class="btn btn-primary">Classes</a></td>
-	        	<td><a href="/toListAssigns" class="btn btn-primary">Assigns</a></td>
-        	</tr>
         </div>
     </body>
 </html>

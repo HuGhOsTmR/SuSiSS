@@ -8,42 +8,47 @@
         <script src="js/bootstrap.min.js"></script>     
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<tr>
 		    <td><a href="/toList" class="btn btn-light">Students</a></td>
         	<td><a href="/toListClasses" class="btn btn-light">Classes</a></td>
         	<td><a href="/toListAssigns" class="btn btn-light">Assigns</a></td>
     	</tr>
     </nav>
-   		<div class="container mt-4">
-   			<form action="/addAssign" method="POST" class="col-sm-5">
+    <div class="container mt-4">
+   			<form action="/updateStudent" method="POST" class="col-sm-5">
    				<div class="card">
    					<div class="card-header">
-   						<h4>Add Assign</h4>
+   						<h4>Update Student</h4>
    					</div>
    					<div class="card-body">
-   						
    						<div class="form-group">
-   							<label>Class</label>
-   							<input type="text" name="classID" class="form-control">
+   							<label>Id</label>
+   							<input type="text" name="id" class="form-control" value="${studentAssign.id}" readonly="readonly">
    						</div>
    						<div class="form-group">
-   							<label>Student</label>
-   							<input type="text" name="studentID" class="form-control">
+   							<label>Code</label>
+   							<input type="text" name="studentID" class="form-control" value="${studentAssign.studentID}">
    						</div>
    						<div class="form-group">
-   							<label>State</label>
-   							<input type="text" name="assignState" class="form-control">
+   							<label>Last Name</label>
+   							<input type="text" name="studentLastName" class="form-control" value="${studentAssign.studentLastName}">
+   						</div>
+   						<div class="form-group">
+   							<label>First Name</label>
+   							<input type="text" name="studentFirstName" class="form-control" value="${studentAssign.studentFirstName}">
    						</div>
    					</div>
    					<div class="card-footer">
-   						<input type="submit" value="Save" class="btn btn-light">
-   						<a href="/toListAssigns" class="btn btn-danger">Back</a>   					
+   						<input type="submit" value="Update" class="btn btn-link">
+   						<a href="/toList" class="btn btn-link">Cancel</a>   					
    					</div>
    				</div>
    			</form>
-   		</div>
-   		<table class= "table">
+   	</div>
+    <div class="container mt-4">
+        <a href="/newClass" class="btn btn-light">Add Class</a>
+        	<table class= "table">
         		<thead>
         			<tr>
         				<th>ID</th>
@@ -69,10 +74,6 @@
         			</c:forEach>
         		</tbody>
         	</table>
-        	<tr>
-	        	<td><a href="/toList" class="btn btn-primary">Students</a></td>
-	        	<td><a href="/toListClasses" class="btn btn-primary">Classes</a></td>
-	        	<td><a href="/toListAssigns" class="btn btn-primary">Assigns</a></td>
-        	</tr>
+    </div> 	
     </body>
 </html>

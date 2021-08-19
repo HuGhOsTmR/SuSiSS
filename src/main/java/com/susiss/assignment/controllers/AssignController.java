@@ -8,13 +8,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.susiss.assignment.assigns.IAssignAssigns;
+import com.susiss.assignment.assigns.IClassAssigns;
+import com.susiss.assignment.assigns.IStudentAssigns;
 import com.susiss.assignment.model.Assign;
+import com.susiss.assignment.model.Student;
 
 @Controller
 public class AssignController {
 
 	@Autowired
 	private IAssignAssigns assigns;
+	private IStudentAssigns assignsStudent;
+	private IClassAssigns assignsClass;
 	
 	@GetMapping("/toListAssigns")
 	public String toList(Model model) {
@@ -51,5 +56,11 @@ public class AssignController {
 	public String deleteAssign(@PathVariable int id) {
 		assigns.Delete(id);
 		return "redirect:/toList";
+	}
+	@GetMapping ("/newAssignClasses/{id}")
+	public String AssignStudentClass(@PathVariable int id, Model model) {
+		Student st = assignsStudent.listStudentById(id);
+		model.addAttribute("studentAssign", st);
+		return "indexStudentAssign";		
 	}
 }

@@ -36,7 +36,7 @@
 	        				<td>${student.studentLastName}</td>
 	        				<td>${student.studentFirstName}</td>
 	        				<td>
-		        				<a href="/newAssign" class="btn btn-light">Assign Class</a>
+		        				<a href="/newAssignClasses/${student.id}" class="btn btn-light">Assign Class</a>
 		        				<a href="/editStudent/${student.id}" class="btn btn-light">Edit</a>
 		        				<a href="/deleteStudent/${student.id}" class="btn btn-danger">Delete</a>
 	        				</td>
