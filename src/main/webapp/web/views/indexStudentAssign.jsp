@@ -46,25 +46,20 @@
 						<table class= "table">
 				    		<thead>
 				    			<tr>
-				    				<th>ID</th>
+				    				<th>CLASSES ASIGNED</th>
+				    			</tr>
+				    			<tr>				    				
 				    				<th>CODE</th>
 				    				<th>TITLE</th>
-				    				<th>DESCRIPTION</th>
-				    				<th>ACTION</th>
+				    				<th>DESCRIPTION</th>				    				
 				    			</tr>        			
 				    		</thead>
 				    		<tbody>
 				    			<c:forEach var="Class" items="${Classes}">
-				    				<tr>
-				        				<td>${Class.id}</td>
+				    				<tr>				        				
 				        				<td>${Class.classCode}</td>
 				        				<td>${Class.classTitle}</td>
-				        				<td>${Class.classDescription}</td>
-				        				<td>
-					        				<a href="/toListAssigns" class="btn btn-light">Student List</a>
-					        				<a href="/editClass/${Class.id}" class="btn btn-light">Edit</a>
-					        				<a href="/deleteClass/${Class.id}" class="btn btn-danger">Delete</a>
-				       					</td>
+				        				<td>${Class.classDescription}</td>				        				
 				    				</tr>
 								</c:forEach>
 							</tbody>
@@ -78,5 +73,38 @@
 				<a href="/toList" class="btn btn-danger">Cancel</a>					  					
 			</div>
 		</form>
+		<div class="row">
+		<div class="col-sm-1"></div>
+		<form class="col-sm-10">
+			<div class="card">
+			<table class= "table">
+	    		<thead>
+	    			<tr>
+	    				<th>ID</th>
+	    				<th>CODE</th>
+	    				<th>TITLE</th>
+	    				<th>DESCRIPTION</th>
+	    				<th>ACTION</th>
+	    			</tr>        			
+	    		</thead>
+	    		<tbody>
+	    			<c:forEach var="Class" items="${Classes}">
+	    				<tr>
+	        				<td>${Class.id}</td>
+	        				<td>${Class.classCode}</td>
+	        				<td>${Class.classTitle}</td>
+	        				<td>${Class.classDescription}</td>
+	        				<td>
+		        				<a href="/toListAssigns" class="btn btn-light">Student List</a>
+		        				<a href="/editClass/${Class.id}" class="btn btn-light">Edit</a>
+		        				<a href="/deleteClass/${Class.id}" class="btn btn-danger">Delete</a>
+	       					</td>
+	    				</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			</div>
+		</form>
+		</div>
     </body>
 </html>
